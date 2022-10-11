@@ -124,7 +124,7 @@ namespace ConsoleApp2
 
             switch (action)
             {
-                case "North":
+                case "north":
                     squarenum = squarenum - 5;
                     break;
 
@@ -144,15 +144,108 @@ namespace ConsoleApp2
         static public int square_8()
         {
             int squarenum = 8;
-            Console.WriteLine("You are at the porch, to the north a table with symbols in the bungalow");
+            Console.WriteLine("You are at the porch, to the north a table with symbols in the bungalow, to the east is an open field, to the south is a hatch in a field.");
             Console.WriteLine("Go east");
             Console.WriteLine("Go south");
+            Console.WriteLine("Go north");
+
 
             string action = Console.ReadLine();
 
             switch (action)
             {
-                case "North":
+                case "north":
+                    squarenum = squarenum - 5;
+                    break;
+
+                case "south":
+                    squarenum = squarenum + 5;
+                    break;
+
+                case "east":
+                    squarenum = squarenum + 1;
+                    break;
+            }
+            return squarenum;
+        }
+
+        static public int square_4()
+        {
+            int squarenum = 4;
+            Console.WriteLine("You have fallen through the trap door, to the east is a small door, to the south is a dark room.");
+            Console.WriteLine("Go east");
+            Console.WriteLine("Go south");
+            
+
+
+            string action = Console.ReadLine();
+
+            switch (action)
+            {
+
+                case "south":
+                    squarenum = squarenum + 5;
+                    break;
+
+                case "east":
+                    squarenum = squarenum + 1;
+                    break;
+
+            }
+            return squarenum;
+        }
+
+        static public int square_9()
+        {
+            int squarenum = 9999;
+            Console.WriteLine("You have fallen into a spike trap and died, game over");
+            Console.ReadLine();
+            
+           return squarenum;
+        }
+
+        static public int square_5()
+        {
+            int squarenum = 5;
+            Console.WriteLine("You have entered a long corridor that turns south, you can go forward towards a large room or go back.");
+            Console.WriteLine("Go east");
+            Console.WriteLine("Go south to room");
+            
+
+
+            string action = Console.ReadLine();
+
+            switch (action)
+            {
+                
+
+                case "south":
+                    squarenum = squarenum + 5;
+                    break;
+
+                case "east":
+                    squarenum = squarenum + 1;
+                    break;
+
+                
+            }
+            return squarenum;
+        }
+
+        static public int square_11()
+        {
+            int squarenum = 11;
+            Console.WriteLine("You find a staircase, carry on south to go up, east is a window to an open field,  ");
+            Console.WriteLine("Go east");
+            Console.WriteLine("Go south");
+            Console.WriteLine("Go north")
+
+
+            string action = Console.ReadLine();
+
+            switch (action)
+            {
+                case "north":
                     squarenum = squarenum - 5;
                     break;
 
@@ -197,12 +290,25 @@ namespace ConsoleApp2
                     case 8:
                         squarenum = square_8();
                         break;
+                    case 4:
+                        squarenum = square_4();
+                        break;
+                    case 9:
+                        squarenum = square_9();
+                        break;
+                    case 5:
+                        squarenum = square_5();
+                        break;
                   
 
             
                     
                 }
-            }
+           
+ 
+           }
         }
+             
+
     }
 }
