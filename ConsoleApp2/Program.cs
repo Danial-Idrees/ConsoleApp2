@@ -235,10 +235,37 @@ namespace ConsoleApp2
         static public int square_11()
         {
             int squarenum = 11;
-            Console.WriteLine("You find a staircase, carry on south to go up, east is a window to an open field,  ");
+            Console.WriteLine("You find a staircase, carry on south to go up, east is a window to an open field, ");
             Console.WriteLine("Go east");
             Console.WriteLine("Go south");
-            Console.WriteLine("Go north")
+           
+            string action = Console.ReadLine();
+
+            switch (action)
+            {
+
+                case "south":
+                    squarenum = squarenum + 5;
+                    break;
+
+                case "east":
+                    squarenum = squarenum + 1;
+                    break;
+                
+                   
+            }
+            return squarenum;
+        }
+
+
+        static public int square_12()
+        {
+            int squarenum = 12;
+            Console.WriteLine("You have climbed out of a small window, to the east is a small hatch in an open field, to the south there is a road, to the north is the backgarden");
+            Console.WriteLine("Go east");
+            Console.WriteLine("Go south");
+            Console.WriteLine("Go north");
+       
 
 
             string action = Console.ReadLine();
@@ -256,16 +283,13 @@ namespace ConsoleApp2
                 case "east":
                     squarenum = squarenum + 1;
                     break;
-
-                case "west":
-                    squarenum = squarenum - 1;
-                    break;
             }
             return squarenum;
-        }
 
 
-        static void Main(string[] args)
+
+           
+            static void Main(string[] args)
         {
             int squarenum = 1;
            while (squarenum > 0 && squarenum < 999)
@@ -298,6 +322,12 @@ namespace ConsoleApp2
                         break;
                     case 5:
                         squarenum = square_5();
+                        break;
+                    case 11:
+                        squarenum = square_11();
+                        break;
+                    case 12:
+                        squarenum = square_12();
                         break;
                   
 
